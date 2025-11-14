@@ -174,7 +174,7 @@ jobs:
 
       # Upload master branch breakdown for future comparison
       - name: upload artifact (master.breakdown)
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: github.ref_name == 'master'
         with:
           name: master.breakdown
