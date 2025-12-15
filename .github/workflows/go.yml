@@ -27,7 +27,7 @@ jobs:
           cache: true  # Enable built-in cache, but we'll handle GOCACHE manually
 
       - name: Cache Go build cache only (for test performance)
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.cache/go-build
           key: ${{ runner.os }}-go-lint-cache-${{ hashFiles('**/go.mod', '**/go.sum') }}-${{ hashFiles('.golangci.yml') }}
@@ -36,7 +36,7 @@ jobs:
             ${{ runner.os }}-go-lint-cache-
 
       - name: Set up golangci-lint cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.cache/golangci-lint
           key: ${{ runner.os }}-golangci-lint-${{ hashFiles('**/go.mod', '**/go.sum') }}-${{ hashFiles('.golangci.yml') }}
@@ -78,7 +78,7 @@ jobs:
         run: go mod download
 
       - name: Cache Go build cache only (for test performance)
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.cache/go-build
           key: ${{ runner.os }}-go-test-cache-${{ hashFiles('**/go.mod', '**/go.sum') }}-${{ hashFiles('**/*_test.go') }}
@@ -87,7 +87,7 @@ jobs:
             ${{ runner.os }}-go-test-cache-
 
       - name: Cache test binaries
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             **/*.test
