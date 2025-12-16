@@ -25,7 +25,7 @@ jobs:
           cache: true  # Enable built-in Go cache
 
       - name: Set up Go tools cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/go/bin
           key: ${{ runner.os }}-go-tools-${{ hashFiles('**/go.mod') }}
@@ -60,7 +60,7 @@ jobs:
           cache: true  # Enable built-in Go cache
 
       - name: Set up Go tools cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/go/bin
           key: ${{ runner.os }}-go-tools-${{ hashFiles('**/go.mod') }}
