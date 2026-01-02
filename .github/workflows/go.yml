@@ -140,7 +140,7 @@ jobs:
       # Download master branch breakdown for coverage comparison
       - name: download artifact (master.breakdown)
         id: download-master-breakdown
-        uses: dawidd6/action-download-artifact@v11
+        uses: dawidd6/action-download-artifact@v12
         if: github.event_name == 'pull_request'
         with:
           branch: master
