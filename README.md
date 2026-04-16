@@ -1,5 +1,15 @@
 # sendria
 
+> [!WARNING]
+> **This project is no longer maintained.**
+>
+> We originally built this library to test SMTP-based email functionality in our Go services against a [Sendria](https://github.com/msztolcman/sendria) instance. We have since moved away from this approach and recommend one of the following alternatives instead:
+>
+> - **[github.com/uponusolutions/go-smtp](https://github.com/uponusolutions/go-smtp)** — a pure-Go ESMTP client and server library. Its `tester` package provides an embeddable in-process SMTP server with a mail map, which removes the need for an external service like Sendria entirely. This is what we use now for testing SMTP in Go.
+> - **[smtp4dev](https://github.com/rnwood/smtp4dev)** — if you still want a standalone capture server (like Sendria), smtp4dev is a well-maintained alternative that supports significantly more standard APIs (IMAP, proper REST, web UI, etc.) than Sendria does.
+>
+> The repository is kept available for existing users, but no further updates, bug fixes, or releases are planned.
+
 [![Go Reference](https://pkg.go.dev/badge/github.com/enthus-golang/sendria.svg)](https://pkg.go.dev/github.com/enthus-golang/sendria)
 [![CI](https://github.com/enthus-golang/sendria/actions/workflows/go.yml/badge.svg)](https://github.com/enthus-golang/sendria/actions/workflows/go.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/enthus-golang/sendria)](https://goreportcard.com/report/github.com/enthus-golang/sendria)
